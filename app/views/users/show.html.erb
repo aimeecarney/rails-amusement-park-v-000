@@ -1,0 +1,12 @@
+<% if @user.admin == true %>
+  <p>ADMIN</p>
+<% end %>
+
+<h1>User Information</h1>
+  Name: <%= @user.name %><br>
+  Mood: <%= @user.mood %><br>
+  Nausea Level: <%= @user.nausea %><br>
+  Tickets: <%= @user.tickets %><br>
+  Height: <%= @user.height %><br>
+
+<a href="/logout">Log Out</a>
