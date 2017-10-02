@@ -1,3 +1,7 @@
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
 <% if @user.admin == true %>
   <p>ADMIN</p>
 <% end %>
@@ -9,4 +13,5 @@
   Tickets: <%= @user.tickets %><br>
   Height: <%= @user.height %><br>
 
-<a href="/logout">Log Out</a>
+  <%= link_to 'See attractions', attractions_path %>
+  <a href="/logout">Log Out</a>
